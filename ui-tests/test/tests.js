@@ -32,7 +32,7 @@ var caps = selectedCaps ? capsConfig[selectedCaps] : undefined;
 var providerPrefix = process.env.PROVIDER_PREFIX ? process.env.PROVIDER_PREFIX + '-' : '';
 var testName = selectedCaps ? providerPrefix + selectedCaps : providerPrefix + 'default';
 
-var baseUrl = process.env.BACKEND_URL ? process.env.BACKEND_URL : 'http://localhost/open-edx/www';
+var baseUrl = process.env.BASE_URL ? process.env.BASE_URL : 'https://open.edx.org/';
 
 describe('Live testing', function() {
 
