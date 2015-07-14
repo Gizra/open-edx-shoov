@@ -54,7 +54,7 @@ describe('Live testing', function() {
         name: 'homePage',
         remove:
           [
-            '#block-bean-open-edx-featured-banner'
+            '.bx-wrapper'
           ]
       }, shoovWebdrivercss.processResults)
       .call(done);
@@ -64,7 +64,11 @@ describe('Live testing', function() {
     client
       .url(baseUrl + 'about-open-edx')
       .webdrivercss(testName, {
-        name: 'about'
+        name: 'about',
+        exclude:
+          [
+            '.stButton_gradient'
+          ]
       },
       shoovWebdrivercss.processResults)
       .call(done);
